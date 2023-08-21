@@ -296,7 +296,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>2.9k</span>
+              <span>3k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -315,254 +315,279 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="小程序知识总结"><a href="#小程序知识总结" class="headerlink" title="小程序知识总结"></a>小程序知识总结</h1><h2 id="1、小程序开发流程"><a href="#1、小程序开发流程" class="headerlink" title="1、小程序开发流程"></a>1、小程序开发流程</h2><ol>
-<li>首先在微信公众平台注册小程序账号, 获取appID</li>
-<li>填写小程序基本信息,并下载微信开发者工具</li>
-<li>使用小程序appID创建小程序项目,并编写完善项目</li>
-<li>上传小程序项目为测试版, 由测试人员测试并修改BUG</li>
-<li>测试完成后,在微信公众平台提交发布, 人工审核通过即可</li>
+        <h1 id="小程序知识总结"><a class="markdownIt-Anchor" href="#小程序知识总结">#</a> 小程序知识总结</h1>
+<h2 id="1-小程序开发流程"><a class="markdownIt-Anchor" href="#1-小程序开发流程">#</a> 1、小程序开发流程</h2>
+<ol>
+<li>首先在微信公众平台注册小程序账号，获取 appID</li>
+<li>填写小程序基本信息，并下载微信开发者工具</li>
+<li>使用小程序 appID 创建小程序项目，并编写完善项目</li>
+<li>上传小程序项目为测试版，由测试人员测试并修改 BUG</li>
+<li>测试完成后，在微信公众平台提交发布，人工审核通过即可</li>
 </ol>
-<h2 id="2、小程序的优劣势"><a href="#2、小程序的优劣势" class="headerlink" title="2、小程序的优劣势"></a>2、小程序的优劣势</h2><h3 id="（1）优势"><a href="#（1）优势" class="headerlink" title="（1）优势"></a>（1）优势</h3><ul>
+<h2 id="2-小程序的优劣势"><a class="markdownIt-Anchor" href="#2-小程序的优劣势">#</a> 2、小程序的优劣势</h2>
+<h3 id="1优势"><a class="markdownIt-Anchor" href="#1优势">#</a> （1）优势</h3>
+<ul>
 <li>容易上手，基础组件库比较全，基本上不需要考虑兼容问题；</li>
 <li>即用即走，不用安装，省流量，省安装时间，不占用桌面</li>
 <li>依托微信流量，天生推广传播优势</li>
-<li>开发成本比App 低</li>
+<li>开发成本比 App 低</li>
 </ul>
-<h3 id="（2）缺点"><a href="#（2）缺点" class="headerlink" title="（2）缺点"></a>（2）缺点</h3><ul>
+<h3 id="2缺点"><a class="markdownIt-Anchor" href="#2缺点">#</a> （2）缺点</h3>
+<ul>
 <li>样式单一，部分组件已经是成型了的，样式不可修改，例如：幻灯片、导航入口</li>
-<li>相对传统App 要深很多</li>
-<li>限制较多,页面大小不能超过2M。不能打开超过5个层级的页面</li>
+<li>相对传统 App 要深很多</li>
+<li>限制较多，页面大小不能超过 2M。不能打开超过 5 个层级的页面</li>
 </ul>
-<h2 id="3、小程序的生命周期"><a href="#3、小程序的生命周期" class="headerlink" title="3、小程序的生命周期"></a>3、小程序的生命周期</h2><h3 id="（1）应用生命周期"><a href="#（1）应用生命周期" class="headerlink" title="（1）应用生命周期"></a>（1）应用生命周期</h3><ul>
+<h2 id="3-小程序的生命周期"><a class="markdownIt-Anchor" href="#3-小程序的生命周期">#</a> 3、小程序的生命周期</h2>
+<h3 id="1应用生命周期"><a class="markdownIt-Anchor" href="#1应用生命周期">#</a> （1）应用生命周期</h3>
+<ul>
 <li>onLauch：应用初始化完成触发，全局只触发一次</li>
 <li>onShow：应用启动，或从后台进入前台触发</li>
 <li>onHide：应用从前台进入后台触发</li>
 <li>onError：应用报错时触发</li>
 </ul>
-<h3 id="（2）页面生命周期"><a href="#（2）页面生命周期" class="headerlink" title="（2）页面生命周期"></a>（2）页面生命周期</h3><ul>
+<h3 id="2页面生命周期"><a class="markdownIt-Anchor" href="#2页面生命周期">#</a> （2）页面生命周期</h3>
+<ul>
 <li>onLoad：页面加载时触发，只会调用一次，一般用来发送数据请求，可获取当前页面路径中的参数。</li>
-<li>onReady：页面初次染完成时触发,只会调用一次，代表页面已可和视图层进行交互。获取节点信息</li>
-<li>onShow：页面显示&#x2F;切入前台时触发</li>
-<li>onHide：页面隐藏&#x2F;切入后台时触发,如底部 tab 切换到其他页面或小程序切入后台触发</li>
-<li>onUnload：页面卸载时触发，如redirectTo或navigateBack到其他页面时</li>
+<li>onReady：页面初次染完成时触发，只会调用一次，代表页面已可和视图层进行交互。获取节点信息</li>
+<li>onShow：页面显示 / 切入前台时触发</li>
+<li>onHide：页面隐藏 / 切入后台时触发，如底部 tab 切换到其他页面或小程序切入后台触发</li>
+<li>onUnload：页面卸载时触发，如 redirectTo 或 navigateBack 到其他页面时</li>
 <li>onPullDownRefresh：页面下拉刷新时执行</li>
 <li>onReachBottom：页面触底时执行</li>
 <li>onShareAppMessage：页面被用户分享时执行</li>
 </ul>
-<h2 id="4、页面路由"><a href="#4、页面路由" class="headerlink" title="4、页面路由"></a>4、页面路由</h2><h3 id="（1）页面栈"><a href="#（1）页面栈" class="headerlink" title="（1）页面栈"></a>（1）页面栈</h3><table>
+<h2 id="4-页面路由"><a class="markdownIt-Anchor" href="#4-页面路由">#</a> 4、页面路由</h2>
+<h3 id="1页面栈"><a class="markdownIt-Anchor" href="#1页面栈">#</a> （1）页面栈</h3>
+<table>
 <thead>
 <tr>
-<th align="left">路由方式</th>
-<th align="left">页面栈表现</th>
+<th style="text-align:left">路由方式</th>
+<th style="text-align:left">页面栈表现</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">初始化</td>
-<td align="left">新页面入栈</td>
+<tbody>
+<tr>
+<td style="text-align:left">初始化</td>
+<td style="text-align:left">新页面入栈</td>
 </tr>
 <tr>
-<td align="left">打开新页面</td>
-<td align="left">新页面入栈</td>
+<td style="text-align:left">打开新页面</td>
+<td style="text-align:left">新页面入栈</td>
 </tr>
 <tr>
-<td align="left">页面重定向</td>
-<td align="left">当前页面出栈，新页面入栈</td>
+<td style="text-align:left">页面重定向</td>
+<td style="text-align:left">当前页面出栈，新页面入栈</td>
 </tr>
 <tr>
-<td align="left">页面返回</td>
-<td align="left">页面不断出栈，直到目标返回页</td>
+<td style="text-align:left">页面返回</td>
+<td style="text-align:left">页面不断出栈，直到目标返回页</td>
 </tr>
 <tr>
-<td align="left">Tab 切换</td>
-<td align="left">页面全部出栈，只留下新的 Tab 页面</td>
+<td style="text-align:left">Tab 切换</td>
+<td style="text-align:left">页面全部出栈，只留下新的 Tab 页面</td>
 </tr>
 <tr>
-<td align="left">重加载</td>
-<td align="left">页面全部出栈，只留下新的页面</td>
+<td style="text-align:left">重加载</td>
+<td style="text-align:left">页面全部出栈，只留下新的页面</td>
 </tr>
-</tbody></table>
-<h3 id="（2）路由方式"><a href="#（2）路由方式" class="headerlink" title="（2）路由方式"></a>（2）路由方式</h3><table>
+</tbody>
+</table>
+<h3 id="2路由方式"><a class="markdownIt-Anchor" href="#2路由方式">#</a> （2）路由方式</h3>
+<table>
 <thead>
 <tr>
-<th align="left">路由方式</th>
-<th align="left">触发时机</th>
-<th align="left">路由前页面</th>
-<th align="left">路由后页面</th>
+<th style="text-align:left">路由方式</th>
+<th style="text-align:left">触发时机</th>
+<th style="text-align:left">路由前页面</th>
+<th style="text-align:left">路由后页面</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">初始化</td>
-<td align="left">小程序打开的第一个页面</td>
-<td align="left"></td>
-<td align="left">onLoad, onShow</td>
+<tbody>
+<tr>
+<td style="text-align:left">初始化</td>
+<td style="text-align:left">小程序打开的第一个页面</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">onLoad, onShow</td>
 </tr>
 <tr>
-<td align="left">打开新页面</td>
-<td align="left">调用 API <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateTo.html">wx.navigateTo</a> 使用组件 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"><code>navigator</code></a></td>
-<td align="left">onHide</td>
-<td align="left">onLoad, onShow</td>
+<td style="text-align:left">打开新页面</td>
+<td style="text-align:left">调用 API <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateTo.html">wx.navigateTo</a> 使用组件 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"> <code>navigator</code> </a></td>
+<td style="text-align:left">onHide</td>
+<td style="text-align:left">onLoad, onShow</td>
 </tr>
 <tr>
-<td align="left">页面重定向</td>
-<td align="left">调用 API <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.redirectTo.html">wx.redirectTo</a> 使用组件 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"><code>navigator</code></a></td>
-<td align="left">onUnload</td>
-<td align="left">onLoad, onShow</td>
+<td style="text-align:left">页面重定向</td>
+<td style="text-align:left">调用 API <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.redirectTo.html">wx.redirectTo</a> 使用组件 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"> <code>navigator</code> </a></td>
+<td style="text-align:left">onUnload</td>
+<td style="text-align:left">onLoad, onShow</td>
 </tr>
 <tr>
-<td align="left">页面返回</td>
-<td align="left">调用 API <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateBack.html">wx.navigateBack</a> 使用组件<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"><code>navigator</code></a> 用户按左上角返回按钮</td>
-<td align="left">onUnload</td>
-<td align="left">onShow</td>
+<td style="text-align:left">页面返回</td>
+<td style="text-align:left">调用 API <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateBack.html">wx.navigateBack</a> 使用组件<a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"> <code>navigator</code> </a> 用户按左上角返回按钮</td>
+<td style="text-align:left">onUnload</td>
+<td style="text-align:left">onShow</td>
 </tr>
 <tr>
-<td align="left">Tab 切换</td>
-<td align="left">调用 API <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.switchTab.html">wx.switchTab</a> 使用组件 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"><code>navigator</code></a> 用户切换 Tab</td>
-<td align="left"></td>
-<td align="left">各种情况请参考下表</td>
+<td style="text-align:left">Tab 切换</td>
+<td style="text-align:left">调用 API <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.switchTab.html">wx.switchTab</a> 使用组件 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"> <code>navigator</code> </a> 用户切换 Tab</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">各种情况请参考下表</td>
 </tr>
 <tr>
-<td align="left">重启动</td>
-<td align="left">调用 API <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.reLaunch.html">wx.reLaunch</a> 使用组件 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"><code>navigator</code></a></td>
-<td align="left">onUnload</td>
-<td align="left">onLoad, onShow</td>
+<td style="text-align:left">重启动</td>
+<td style="text-align:left">调用 API <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.reLaunch.html">wx.reLaunch</a> 使用组件 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/component/navigator.html"> <code>navigator</code> </a></td>
+<td style="text-align:left">onUnload</td>
+<td style="text-align:left">onLoad, onShow</td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
 <p>Tab 切换对应的生命周期（以 A、B 页面为 Tabbar 页面，C 是从 A 页面打开的页面，D 页面是从 C 页面打开的页面为例）：</p>
 <table>
 <thead>
 <tr>
-<th align="left">当前页面</th>
-<th align="left">路由后页面</th>
-<th align="left">触发的生命周期（按顺序）</th>
+<th style="text-align:left">当前页面</th>
+<th style="text-align:left">路由后页面</th>
+<th style="text-align:left">触发的生命周期（按顺序）</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">A</td>
-<td align="left">A</td>
-<td align="left">Nothing happend</td>
+<tbody>
+<tr>
+<td style="text-align:left">A</td>
+<td style="text-align:left">A</td>
+<td style="text-align:left">Nothing happend</td>
 </tr>
 <tr>
-<td align="left">A</td>
-<td align="left">B</td>
-<td align="left">A.onHide(), B.onLoad(), B.onShow()</td>
+<td style="text-align:left">A</td>
+<td style="text-align:left">B</td>
+<td style="text-align:left">A.onHide(), B.onLoad(), B.onShow()</td>
 </tr>
 <tr>
-<td align="left">A</td>
-<td align="left">B（再次打开）</td>
-<td align="left">A.onHide(), B.onShow()</td>
+<td style="text-align:left">A</td>
+<td style="text-align:left">B（再次打开）</td>
+<td style="text-align:left">A.onHide(), B.onShow()</td>
 </tr>
 <tr>
-<td align="left">C</td>
-<td align="left">A</td>
-<td align="left">C.onUnload(), A.onShow()</td>
+<td style="text-align:left">C</td>
+<td style="text-align:left">A</td>
+<td style="text-align:left">C.onUnload(), A.onShow()</td>
 </tr>
 <tr>
-<td align="left">C</td>
-<td align="left">B</td>
-<td align="left">C.onUnload(), B.onLoad(), B.onShow()</td>
+<td style="text-align:left">C</td>
+<td style="text-align:left">B</td>
+<td style="text-align:left">C.onUnload(), B.onLoad(), B.onShow()</td>
 </tr>
 <tr>
-<td align="left">D</td>
-<td align="left">B</td>
-<td align="left">D.onUnload(), C.onUnload(), B.onLoad(), B.onShow()</td>
+<td style="text-align:left">D</td>
+<td style="text-align:left">B</td>
+<td style="text-align:left">D.onUnload(), C.onUnload(), B.onLoad(), B.onShow()</td>
 </tr>
 <tr>
-<td align="left">D（从转发进入）</td>
-<td align="left">A</td>
-<td align="left">D.onUnload(), A.onLoad(), A.onShow()</td>
+<td style="text-align:left">D（从转发进入）</td>
+<td style="text-align:left">A</td>
+<td style="text-align:left">D.onUnload(), A.onLoad(), A.onShow()</td>
 </tr>
 <tr>
-<td align="left">D（从转发进入）</td>
-<td align="left">B</td>
-<td align="left">D.onUnload(), B.onLoad(), B.onShow()</td>
+<td style="text-align:left">D（从转发进入）</td>
+<td style="text-align:left">B</td>
+<td style="text-align:left">D.onUnload(), B.onLoad(), B.onShow()</td>
 </tr>
-</tbody></table>
-<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
-<li><code>navigateTo</code>, <code>redirectTo</code> 只能打开非 tabBar 页面。</li>
-<li><code>switchTab</code> 只能打开 tabBar 页面。</li>
-<li><code>reLaunch</code> 可以打开任意页面。</li>
+</tbody>
+</table>
+<h4 id="注意事项"><a class="markdownIt-Anchor" href="#注意事项">#</a> 注意事项</h4>
+<ul>
+<li><code>navigateTo</code> ,  <code>redirectTo</code>  只能打开非 tabBar 页面。</li>
+<li><code>switchTab</code>  只能打开 tabBar 页面。</li>
+<li><code>reLaunch</code>  可以打开任意页面。</li>
 <li>页面底部的 tabBar 由页面决定，即只要是定义为 tabBar 的页面，底部都有 tabBar。</li>
-<li>调用页面路由带的参数可以在目标页面的<code>onLoad</code>中获取。</li>
+<li>调用页面路由带的参数可以在目标页面的 <code>onLoad</code>  中获取。</li>
 </ul>
-<h2 id="5、导航"><a href="#5、导航" class="headerlink" title="5、导航"></a>5、导航</h2><h3 id="（1）编程式导航"><a href="#（1）编程式导航" class="headerlink" title="（1）编程式导航"></a>（1）编程式导航</h3><ul>
-<li><p>1、wx.switchTab(Object object)</p>
+<h2 id="5-导航"><a class="markdownIt-Anchor" href="#5-导航">#</a> 5、导航</h2>
+<h3 id="1编程式导航"><a class="markdownIt-Anchor" href="#1编程式导航">#</a> （1）编程式导航</h3>
+<ul>
+<li>
+<p>1、wx.switchTab(Object object)</p>
 <p>功能描述:</p>
 <p>跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.<span class="title function_">switchTab</span>(&#123;</span><br><span class="line">   <span class="attr">url</span>: <span class="string">&#x27;url&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
 </li>
-<li><p>2、wx.reLaunch(Object object)</p>
+<li>
+<p>2、wx.reLaunch(Object object)</p>
 <p>功能描述：</p>
-<p>关闭所有页面，打开到应用内的某个页面，可以跳转到任何一个页面，对比navigateTo(),保留当前页面再跳转</p>
+<p>关闭所有页面，打开到应用内的某个页面，可以跳转到任何一个页面，对比 navigateTo (), 保留当前页面再跳转</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.<span class="title function_">reLaunch</span>(&#123;</span><br><span class="line">   <span class="attr">url</span>: <span class="string">&#x27;url&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-
 </li>
-<li><p>3、wx.redirectTo(Object object)</p>
+<li>
+<p>3、wx.redirectTo(Object object)</p>
 <p>功能描述</p>
 <p>关闭当前页面，跳转到应用内的某个页面，但是不允许跳转到 tabbar 页面</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.<span class="title function_">redirectTo</span>(&#123;</span><br><span class="line">   <span class="attr">url</span>: <span class="string">&#x27;url&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>4、wx.navigateTo(Object object)</p>
+<li>
+<p>4、wx.navigateTo(Object object)</p>
 <p>功能描述：</p>
 <p>保留当前页面，跳转到应用内的某个页面。但是不能跳到 tabbar 页面。使用 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateBack.html">wx.navigateBack</a> 可以返回到原页面。</p>
-<p>对于页面不是很多的小程序，通常推荐使用wx.navigateTo进行跳转，以便返回页面，以提高加载速度</p>
+<p>对于页面不是很多的小程序，通常推荐使用 wx.navigateTo 进行跳转，以便返回页面，以提高加载速度</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.<span class="title function_">navigateTo</span>(&#123;</span><br><span class="line">      <span class="attr">url</span>: <span class="string">&#x27;url&#x27;</span>,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>5、wx.navigateBack(Object object)</p>
+<li>
+<p>5、wx.navigateBack(Object object)</p>
 <p>功能描述</p>
 <p>关闭当前页面，返回上一页面或多级页面。可通过 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/reference/api/getCurrentPages.html">getCurrentPages</a> 获取当前的页面栈，决定需要返回几层</p>
-<p>小程序的页面栈最多10层</p>
+<p>小程序的页面栈最多 10 层</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wx.<span class="title function_">navigateBack</span>()</span><br></pre></td></tr></table></figure>
-
-
 </li>
-<li><p>6、跳转到其他小程序，需要配置</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">wx.<span class="title function_">navigateBackMiniProgram</span>(&#123;</span><br><span class="line">      <span class="attr">appId</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">extraData</span>: &#123;</span><br><span class="line">        <span class="attr">foo</span>: <span class="string">&#x27;bar&#x27;</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">envVersion</span>: <span class="string">&#x27;develop&#x27;</span>,</span><br><span class="line">      <span class="title function_">success</span>(<span class="params">res</span>) &#123;</span><br><span class="line">		<span class="comment">//打开成功</span></span><br><span class="line">      &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>
+<p>6、跳转到其他小程序，需要配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">wx.<span class="title function_">navigateBackMiniProgram</span>(&#123;</span><br><span class="line">      <span class="attr">appId</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">path</span>: <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">      <span class="attr">extraData</span>: &#123;</span><br><span class="line">        <span class="attr">foo</span>: <span class="string">&#x27;bar&#x27;</span></span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="attr">envVersion</span>: <span class="string">&#x27;develop&#x27;</span>,</span><br><span class="line">      <span class="title function_">success</span>(<span class="params">res</span>) &#123;</span><br><span class="line">		<span class="comment">//打开成功</span></span><br><span class="line">      &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<h3 id="（2）声明式导航"><a href="#（2）声明式导航" class="headerlink" title="（2）声明式导航"></a>（2）声明式导航</h3><table>
+<h3 id="2声明式导航"><a class="markdownIt-Anchor" href="#2声明式导航">#</a> （2）声明式导航</h3>
+<table>
 <thead>
 <tr>
-<th align="left">open-type合法值</th>
-<th align="left">说明</th>
-<th align="left">最低版本</th>
+<th style="text-align:left">open-type 合法值</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">最低版本</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">navigate</td>
-<td align="left">对应 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateTo.html">wx.navigateTo</a> 或 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">wx.navigateToMiniProgram</a> 的功能</td>
-<td align="left"></td>
+<tbody>
+<tr>
+<td style="text-align:left">navigate</td>
+<td style="text-align:left">对应 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateTo.html">wx.navigateTo</a> 或 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">wx.navigateToMiniProgram</a> 的功能</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">redirect</td>
-<td align="left">对应 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.redirectTo.html">wx.redirectTo</a> 的功能</td>
-<td align="left"></td>
+<td style="text-align:left">redirect</td>
+<td style="text-align:left">对应 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.redirectTo.html">wx.redirectTo</a> 的功能</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">switchTab</td>
-<td align="left">对应 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.switchTab.html">wx.switchTab</a> 的功能</td>
-<td align="left"></td>
+<td style="text-align:left">switchTab</td>
+<td style="text-align:left">对应 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.switchTab.html">wx.switchTab</a> 的功能</td>
+<td style="text-align:left"></td>
 </tr>
 <tr>
-<td align="left">reLaunch</td>
-<td align="left">对应 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.reLaunch.html">wx.reLaunch</a> 的功能</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html">1.1.0</a></td>
+<td style="text-align:left">reLaunch</td>
+<td style="text-align:left">对应 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.reLaunch.html">wx.reLaunch</a> 的功能</td>
+<td style="text-align:left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html">1.1.0</a></td>
 </tr>
 <tr>
-<td align="left">navigateBack</td>
-<td align="left">对应 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateBack.html">wx.navigateBack</a> 或 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateBackMiniProgram.html">wx.navigateBackMiniProgram</a> （基础库 2.24.4 版本支持）的功能</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html">1.1.0</a></td>
+<td style="text-align:left">navigateBack</td>
+<td style="text-align:left">对应 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/route/wx.navigateBack.html">wx.navigateBack</a> 或 <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateBackMiniProgram.html">wx.navigateBackMiniProgram</a> （基础库 2.24.4 版本支持）的功能</td>
+<td style="text-align:left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html">1.1.0</a></td>
 </tr>
 <tr>
-<td align="left">exit</td>
-<td align="left">退出小程序，<code>target=&quot;miniProgram&quot;</code>时生效</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html">2.1.0</a></td>
+<td style="text-align:left">exit</td>
+<td style="text-align:left">退出小程序， <code>target=&quot;miniProgram&quot;</code>  时生效</td>
+<td style="text-align:left"><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/compatibility.html">2.1.0</a></td>
 </tr>
-</tbody></table>
-<h2 id="6、bindtap和catchtap的区别是什么？"><a href="#6、bindtap和catchtap的区别是什么？" class="headerlink" title="6、bindtap和catchtap的区别是什么？"></a>6、bindtap和catchtap的区别是什么？</h2><ul>
+</tbody>
+</table>
+<h2 id="6-bindtap和catchtap的区别是什么"><a class="markdownIt-Anchor" href="#6-bindtap和catchtap的区别是什么">#</a> 6、bindtap 和 catchtap 的区别是什么？</h2>
+<ul>
 <li><strong>相同点</strong>：首先他们都是作为点击事件函数，就是点击时触发。在这个作用上他们是一样的，可以不做区分</li>
-<li><strong>不同点</strong>：他们的不同点主要是bindtap是不会阻止冒泡事件的，catchtap是阻止冒泡的</li>
+<li><strong>不同点</strong>：他们的不同点主要是 bindtap 是不会阻止冒泡事件的，catchtap 是阻止冒泡的</li>
 </ul>
     </div>
 
@@ -672,7 +697,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93"><span class="nav-text">小程序知识总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="nav-text">1、小程序开发流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%BC%98%E5%8A%A3%E5%8A%BF"><span class="nav-text">2、小程序的优劣势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E4%BC%98%E5%8A%BF"><span class="nav-text">（1）优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%BC%BA%E7%82%B9"><span class="nav-text">（2）缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text">3、小程序的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%BA%94%E7%94%A8%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text">（1）应用生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E9%A1%B5%E9%9D%A2%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text">（2）页面生命周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E9%A1%B5%E9%9D%A2%E8%B7%AF%E7%94%B1"><span class="nav-text">4、页面路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E9%A1%B5%E9%9D%A2%E6%A0%88"><span class="nav-text">（1）页面栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E8%B7%AF%E7%94%B1%E6%96%B9%E5%BC%8F"><span class="nav-text">（2）路由方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">注意事项</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E5%AF%BC%E8%88%AA"><span class="nav-text">5、导航</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="nav-text">（1）编程式导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E5%A3%B0%E6%98%8E%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="nav-text">（2）声明式导航</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81bindtap%E5%92%8Ccatchtap%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-text">6、bindtap和catchtap的区别是什么？</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93"><span class="nav-text"> 小程序知识总结</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B"><span class="nav-text"> 1、小程序开发流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E4%BC%98%E5%8A%A3%E5%8A%BF"><span class="nav-text"> 2、小程序的优劣势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E4%BC%98%E5%8A%BF"><span class="nav-text"> （1）优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E7%BC%BA%E7%82%B9"><span class="nav-text"> （2）缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text"> 3、小程序的生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E5%BA%94%E7%94%A8%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text"> （1）应用生命周期</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E9%A1%B5%E9%9D%A2%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-text"> （2）页面生命周期</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E9%A1%B5%E9%9D%A2%E8%B7%AF%E7%94%B1"><span class="nav-text"> 4、页面路由</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E9%A1%B5%E9%9D%A2%E6%A0%88"><span class="nav-text"> （1）页面栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E8%B7%AF%E7%94%B1%E6%96%B9%E5%BC%8F"><span class="nav-text"> （2）路由方式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text"> 注意事项</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%AF%BC%E8%88%AA"><span class="nav-text"> 5、导航</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E7%BC%96%E7%A8%8B%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="nav-text"> （1）编程式导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E5%A3%B0%E6%98%8E%E5%BC%8F%E5%AF%BC%E8%88%AA"><span class="nav-text"> （2）声明式导航</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-bindtap%E5%92%8Ccatchtap%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-text"> 6、bindtap 和 catchtap 的区别是什么？</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
